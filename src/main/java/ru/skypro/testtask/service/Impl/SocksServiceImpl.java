@@ -57,7 +57,7 @@ public class SocksServiceImpl implements SocksService {
     public SocksDTO arrivalOfSocksToTheWarehouse(SocksDTO socksDTO) {
         log.info("Вызван метод добавления носков на склад");
         Socks socks = socksRepository.findDistinctByColorAndCottonPart(socksDTO.getColor(), socksDTO.getCottonPart())
-                .orElse(new Socks(null, null, socksDTO.getColor(), socksDTO.getCottonPart(), 0));
+                .orElse(new Socks(null, socksDTO.getColor(), socksDTO.getCottonPart(), 0));
         socks.setQuantity(socks.getQuantity() + socksDTO.getQuantity());
         socksRepository.save(socks);
         return socksMapper.socksToSocksDto(socks);

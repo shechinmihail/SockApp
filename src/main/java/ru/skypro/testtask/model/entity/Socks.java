@@ -26,12 +26,6 @@ public class Socks {
     private Integer id;
 
     /**
-     * Название носков
-     */
-    @Column(name = "name", nullable = false)
-    private String name;
-
-    /**
      * Цвет носков
      */
     @Column(name = "color", nullable = false)

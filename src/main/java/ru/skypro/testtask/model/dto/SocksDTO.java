@@ -1,7 +1,6 @@
 package ru.skypro.testtask.model.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.*;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
@@ -10,13 +9,11 @@ import javax.validation.constraints.Min;
  * Носки
  */
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class SocksDTO {
-
-    /**
-     * Название носков
-     */
-    private String name;
 
     /**
      * Цвет носков
